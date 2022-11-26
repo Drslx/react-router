@@ -3,6 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
+### `npm run server`
+Runs start json-server
 
 In the project directory, you can run:
 
@@ -68,3 +70,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Configurando o React Router
+
+1: Importar react-router-dom;
+2: Definir BrowserRouter;
+3: Definir Routas;
+4: Um elemento para cada rota, config path e componente
