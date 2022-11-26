@@ -8,6 +8,9 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 
+// Components
+import Navbar from "./Components/Navbar";
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +21,8 @@ function App() {
       <h1>React Router</h1>
       {/* Elementos a cima do BrowserRouter serão repetidos em varias paginas */}
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
