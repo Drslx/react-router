@@ -21,8 +21,9 @@ function App() {
       <h1>React Router</h1>
       {/* Elementos a cima do BrowserRouter serão repetidos em varias paginas */}
       <BrowserRouter>
+      {/* 2 Links com react router */}
         <Navbar />
-
+        
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
