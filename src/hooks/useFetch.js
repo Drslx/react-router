@@ -51,9 +51,9 @@ export const useFetch = (url) => {
       // 8 - tratando erros
       try {
         const res = await fetch(url);
-        const json = await res.json();
+        const data = await res.json();
 
-        setData(json);
+        setData(data);
         setMethod(null);
 
         // 8 - tratando erros
@@ -82,17 +82,17 @@ export const useFetch = (url) => {
         let fetchOptions = [url, config];
 
         const res = await fetch(...fetchOptions);
-        const json = await res.json();
+        const data = await res.json();
 
-        setCallFetch(json);
+        setCallFetch(data);
         // 9 - desafio
       } else if (method === "DELETE") {
         const deleteUrl = `${url}/${itemId}`;
 
         const res = await fetch(deleteUrl, config);
-        const json = await res.json();
+        const data = await res.json();
 
-        setCallFetch(json);
+        setCallFetch(data);
       }
     };
 

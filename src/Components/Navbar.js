@@ -5,9 +5,11 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
+    /* Links do componentes */
     <nav>
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
+     
     </nav>
   );
 };

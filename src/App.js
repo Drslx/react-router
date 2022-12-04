@@ -4,12 +4,13 @@ import "./App.css";
 // 1 - Config react router
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+// Components
+import Navbar from "./Components/Navbar";
+
 // Pages
 import Home from "./pages/Home";
 import About from "./pages/About";
-
-// Components
-import Navbar from "./Components/Navbar";
+import Product from "./pages/Product";
 
 function App() {
   return (
@@ -21,12 +22,16 @@ function App() {
       <h1>React Router</h1>
       {/* Elementos a cima do BrowserRouter serão repetidos em varias paginas */}
       <BrowserRouter>
-      {/* 2 Links com react router */}
+        {/* 2 Links com react router  */}
         <Navbar />
-        
+
+        {/* Rotas dos componentes */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
+
+          {/* Rota dinâmica */}
+          <Route path="/products/:id" element={<Product />} />
         </Routes>
       </BrowserRouter>
     </div>
