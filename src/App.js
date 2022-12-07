@@ -11,6 +11,7 @@ import Navbar from "./Components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
+import Info from "./pages/Info";
 
 function App() {
   return (
@@ -22,16 +23,19 @@ function App() {
       <h1>React Router</h1>
       {/* Elementos a cima do BrowserRouter serão repetidos em varias paginas */}
       <BrowserRouter>
-        {/* 2 Links com react router  */}
+        {/*  Links para home e about na navbar com react router  */}
         <Navbar />
 
-        {/* Rotas dos componentes */}
         <Routes>
+          {/* Rotas dos componentes */}
           <Route path="/" element={<Home />} />
           <Route path="about" element={<About />} />
 
           {/* Rota dinâmica */}
           <Route path="/products/:id" element={<Product />} />
+
+          {/* Nested routes */}
+          <Route path="/products/:id/info" element={<Info />}></Route>
         </Routes>
       </BrowserRouter>
     </div>
