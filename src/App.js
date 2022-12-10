@@ -12,6 +12,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Product from "./pages/Product";
 import Info from "./pages/Info";
+import Notfound from './pages/Notfound';
 
 function App() {
   return (
@@ -36,6 +37,10 @@ function App() {
 
           {/* Nested routes */}
           <Route path="/products/:id/info" element={<Info />}></Route>
+     
+     
+     {/* No match route */}
+     <Route path="*" element={<Notfound />} />
         </Routes>
       </BrowserRouter>
     </div>
