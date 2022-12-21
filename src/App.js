@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 
 // 1 - Config react router
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
 // Components
 import Navbar from "./Components/Navbar";
@@ -45,6 +45,9 @@ function App() {
 
           {/* Search params */}
           <Route path="/search" element={<Search />} />
+
+          {/* Redirect */}
+          <Route path="/company" element={<Navigate  to="/about" />} />
 
           {/* No match route */}
           <Route path="*" element={<Notfound />} />
